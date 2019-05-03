@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">\
+    
+</head>
+<body>
+    <header class="container">
+            <div class="card" style="width: 18rem;">
+                    <img src="css/h1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body border-top border-bottom">
+                      <h5 class="card-title ">Hành Trình Về Nguồn <a class="fa fa-user-plus float-right" href="#" aria-hidden="true"></a></h5>
+                    </div>
+                    <div class="row">
+                        
+                            <div class="col-8 px-3 ">                      
+                                <p>Start-day: </p>
+                                <p>End-day: </p>
+                                <p>Place: </p>
+                                <p>Description: </p>
+                            </div>
+
+                            <div class="col-4  ">
+                                <button class="btn btn-outline-info btn-sm my-1"> List   <i class="ml-2 fa fa-list" aria-hidden="true"></i></i></button>
+                                <button class="btn btn-outline-primary btn-sm">Share <i class="fa fa-facebook-official" aria-hidden="true"></i></button>
+                            </div>
+                        
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row align-items-center justify-content-center">
+                            <button class="btn btn-outline-secondary ">Details <i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <button class="btn btn-outline-success mx-2"> Update <i class="fa fa-cloud-download" aria-hidden="true"></i></button>
+                            <button  class="btn btn-outline-danger show-alert  ">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                           
+                    </div>
+                    
+                 
+                  
+    </header>
+
+
+     <!-- JS dependencies -->
+     <script src="js/jquery.js"></script>
+
+
+     <!-- Bootstrap 4 dependency -->
+     <script src="js/popper.js"></script>
+     <script src="js/bootstrap.js"></script>
+ 
+   
+    <!-- bootbox code -->
+    <script src="js/bootbox.min.js"></script>
+    <script src="js/bootbox.locales.min.js"></script>
+
+    <script>
+        $(document).on("click", ".show-alert", function(e) {
+            bootbox.confirm({
+                message: "Are you delete ?",
+                className:'tada animated',
+                buttons: {
+                    confirm: {
+                    label: 'Yes',
+                    className: 'btn-success'
+                },
+            cancel: {
+            label: 'No',
+            className: 'btn-danger'
+            }
+         },
+            callback: function (result) {
+            console.log('This was logged in the callback: ' + result);
+        }
+});
+        });
+    </script>
+</body>
+</html>

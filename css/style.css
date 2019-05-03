@@ -1,0 +1,16 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+.Img{
+    height: 200px;
+    
+    background-image:url("h1.jpg");
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+
+}
